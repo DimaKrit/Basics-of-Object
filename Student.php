@@ -60,4 +60,10 @@ class Student
 
 	}
 
+    public function __call($funName, $arguments)
+    {
+     
+        throw new Exception(
+    		'The function you called：' . $funName . '(parameter：'. print_r($arguments) .')does not exist!');                  
+    }  
 }
