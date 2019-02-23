@@ -3,11 +3,11 @@
 class Student
 {
 	const MAX_GPA = 4;
-	public $firstname;
-	public $lastname;
-	public $gpa;
-	public $status;
-	public $gender;
+	protected $firstname;
+	protected $lastname;
+	protected $gpa;
+	protected $status;
+	protected $gender;
 	private static $genderType = ['male', 'female'];
 	protected static $statusType = ['freshman', 'sophomore', 'junior', 'senior'];
 
@@ -65,5 +65,56 @@ class Student
      
         throw new Exception(
     		'The function you called：' . $funName . '(parameter：'. print_r($arguments) .')does not exist!');                  
-    }  
+    }
+
+    public function getFirstname()
+    {
+    	return $this->firstname;
+    }
+
+    public function getLastname()
+    {
+    	return $this->lastname;
+    } 
+
+    public function getGpa()
+    {
+    	return $this->gpa;
+    }
+
+    public function getStatus()
+    {
+    	return $this->status;
+    }
+
+    public function getGender()
+    {
+    	return $this->gender;
+    } 
+
+     public function setFirstname($firstname)
+    {
+    	$this->firstname = $firstname;
+    }
+
+    public function setLastname($lastname)
+    {
+    	$this->lastname = $lastname;
+    } 
+
+    public function setGpa($gpa)
+    {
+    	$this->gpa = $gpa;
+    }
+
+    public function setStatus($status)
+    {
+		$this->status = $status;
+    }
+
+    public function setGender($gender)
+    {
+		$this->gender = $gender;
+    } 
+
 }
