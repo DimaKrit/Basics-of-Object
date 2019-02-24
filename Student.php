@@ -82,16 +82,6 @@ class Student
     	return $this->gpa;
     }
 
-    public function getStatus()
-    {
-    	return $this->status;
-    }
-
-    public function getGender()
-    {
-    	return $this->gender;
-    } 
-
      public function setFirstname($firstname)
     {
     	$this->firstname = $firstname;
@@ -106,15 +96,4 @@ class Student
     {
     	$this->gpa = $gpa;
     }
-
-    public function setStatus($status)
-    {
-		$this->status = $status;
-    }
-
-    public function setGender($gender)
-    {
-		$this->gender = $gender;
-    } 
-
 }
